@@ -1,4 +1,4 @@
-# SQL Excercise
+# Rockbuster Analysis (SQL & Tableau)
 
 This repository contains work, mainly in SQL, that was completed during my CareerFoundry course in data analytics. 
 
