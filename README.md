@@ -16,6 +16,8 @@ Here are the deliverables that were produced in this project:
 
   - [Presentation](presentation.pdf)
 
+  - [Data Visualizations](https://public.tableau.com/views/RockbusterVisualizations/geographicalinsights?:language=en-US&:display_count=n&:origin=viz_share_link) (created using Tableau)
+  
 ### *SQL*
 
 Example SQL queries are found in the other files in this repository. 
