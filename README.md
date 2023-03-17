@@ -12,6 +12,10 @@ The goal of this project was to conduct analysis on, and create visualizations f
 
 Here are the deliverables that were produced in this project:
 
+  - [Data Dictionary](https://dbdocs.io/junhotam/rockbuster_data_dictionary) (data dictionary was created using dbdocs.io and DBML)
+
+  - [Presentation](presentation.pdf)
+
 ### *SQL*
 
 Example SQL queries are found in the other files in this repository. 
