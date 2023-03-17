@@ -1,0 +1,28 @@
+Finding Top Movie Categories, Top 3 Movies, and Bottom 3 Movies
+
+CREATE VIEW movies_with_customer AS	
+SELECT F.title, A.amount, B.customer_id, E.name AS category_name	
+FROM payment A	
+LEFT JOIN rental B ON A.rental_id = B.rental_id	
+LEFT JOIN inventory C ON B.inventory_id = C.inventory_id	
+LEFT JOIN film_category D ON C.film_id = D.film_id	
+INNER JOIN category E ON D.category_id = E.category_id	
+LEFT JOIN film F ON C.film_id = F.film_id;	
+	
+SELECT category_name, COUNT(customer_id), SUM(amount) AS total_amount	
+FROM movies_with_customer	
+GROUP BY category_name	
+ORDER BY total_amount DESC	
+	
+	
+SELECT title, SUM(amount) AS total_amount	
+FROM movies_with_customer	
+GROUP BY title	
+ORDER BY total_amount DESC	
+LIMIT 5	
+	
+SELECT title, SUM(amount) AS total_amount	
+FROM movies_with_customer	
+GROUP BY title	
+ORDER BY total_amount ASC	
+LIMIT 5	
