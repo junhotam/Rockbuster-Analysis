@@ -1,0 +1,26 @@
+-- Finding Top Countries and Cities by Number of Customers
+
+SELECT city_count.country, city_count.city, country_count.active,			
+city_count.city_customer_count,			
+country_count.country_customer_count			
+FROM			
+			
+(SELECT D.country, A.customer_id, C.city, COUNT(DISTINCT(A.customer_id)) AS city_customer_count			
+FROM customer A			
+INNER JOIN address B ON A.address_id = B.address_id			
+INNER JOIN city C ON B.city_id = C.city_id			
+INNER JOIN country D ON C.country_id = D.country_id			
+GROUP BY customer_id, city, country			
+) AS city_count			
+			
+LEFT JOIN			
+			
+(SELECT D.country, SUM(A.active) AS active, COUNT(DISTINCT(A.customer_id)) AS country_customer_count			
+FROM customer A			
+INNER JOIN address B ON A.address_id = B.address_id			
+INNER JOIN city C ON B.city_id = C.city_id			
+INNER JOIN country D ON C.country_id = D.country_id			
+GROUP BY country)			
+AS country_count			
+			
+ON city_count.country = country_count.country			
