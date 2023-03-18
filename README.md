@@ -21,3 +21,7 @@ Here are the deliverables that were produced in this project:
 ### *SQL*
 
 Example SQL queries are found in the other files in this repository. 
+
+### *Data*
+
+The data that was used in this project can be found [here](http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
